@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="725.0" prefWidth="1190.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e1da" height="673.0" layoutX="25.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="1141.0" />
+        <Button alignment="CENTER" layoutX="1021.0" layoutY="627.0" onAction="#handleExitButton" prefHeight="41.0" prefWidth="86.0" text="Exit" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <FlowPane layoutX="22.0" layoutY="124.0" prefHeight="503.0" prefWidth="575.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="41.0" prefWidth="100.0" text="Parts">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets top="10.0" />
+               </FlowPane.margin>
+            </Label>
+            <Button onAction="#handleSearchPartButton" prefHeight="41.0" prefWidth="86.0" text="Search">
+               <FlowPane.margin>
+                  <Insets left="189.0" top="10.0" />
+               </FlowPane.margin></Button>
+            <TextField fx:id="searchPartText" prefHeight="25.0" prefWidth="160.0">
+               <FlowPane.margin>
+                  <Insets left="20.0" />
+               </FlowPane.margin></TextField>
+            <TableView fx:id="partsTable" prefHeight="349.0" prefWidth="536.0">
+              <columns>
+                <TableColumn fx:id="partID" prefWidth="134.0" text="Part ID" />
+                <TableColumn fx:id="partName" prefWidth="134.0" text="Part Name" />
+                  <TableColumn fx:id="partInventoryLevel" prefWidth="134.0" text="Inventory Level" />
+                  <TableColumn fx:id="partCostPerUnit" prefWidth="134.0" text="Cost Per Unit" />
+              </columns>
+               <FlowPane.margin>
+                  <Insets left="20.0" top="20.0" />
+               </FlowPane.margin>
+            </TableView>
+            <Button fx:id="addPartButton" alignment="CENTER" onAction="#handleAddPartButton" prefHeight="41.0" prefWidth="86.0" text="Add">
+               <FlowPane.margin>
+                  <Insets left="202.0" top="20.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="modifyPartButton" onAction="#handleModifyPartButton" prefHeight="41.0" prefWidth="86.0" text="Modify">
+               <FlowPane.margin>
+                  <Insets left="25.0" right="25.0" top="20.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button onAction="#handlePartDelete" prefHeight="41.0" prefWidth="86.0" text="Delete">
+               <FlowPane.margin>
+                  <Insets top="20.0" />
+               </FlowPane.margin>
+            </Button>
+         </children>
+      </FlowPane>
+      <FlowPane layoutX="595.0" layoutY="124.0" prefHeight="503.0" prefWidth="575.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="41.0" prefWidth="138.0" text="Product">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button onAction="#handleProductSearch" prefHeight="41.0" prefWidth="86.0" text="Search">
+               <FlowPane.margin>
+                  <Insets left="150.0" top="10.0" />
+               </FlowPane.margin>
+            </Button>
+            <TextField fx:id="productSearchText" prefHeight="25.0" prefWidth="161.0">
+               <FlowPane.margin>
+                  <Insets left="20.0" />
+               </FlowPane.margin>
+            </TextField>
+            <TableView fx:id="productTable" prefHeight="349.0" prefWidth="536.0">
+               <columns>
+                  <TableColumn fx:id="productId" prefWidth="134.0" text="Product ID" />
+                  <TableColumn fx:id="productName" prefWidth="134.0" text="Product Name" />
+                  <TableColumn fx:id="productInventory" prefWidth="134.0" text="Inventory Level" />
+                  <TableColumn fx:id="pricePerUnitProduct" prefWidth="134.0" text="Price per Unit" />
+               </columns>
+               <FlowPane.margin>
+                  <Insets left="20.0" top="20.0" />
+               </FlowPane.margin>
+            </TableView>
+            <Button alignment="CENTER" onAction="#handleProductAdd" prefHeight="41.0" prefWidth="86.0" text="Add">
+               <FlowPane.margin>
+                  <Insets left="202.0" top="20.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button onAction="#handleProductModify" prefHeight="41.0" prefWidth="86.0" text="Modify">
+               <FlowPane.margin>
+                  <Insets left="25.0" right="25.0" top="20.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button onAction="#handleProductDelete" prefHeight="41.0" prefWidth="86.0" text="Delete">
+               <FlowPane.margin>
+                  <Insets top="20.0" />
+               </FlowPane.margin>
+            </Button>
+         </children>
+      </FlowPane>
+      <Label layoutX="45.0" layoutY="55.0" text="Inventory Management System" textFill="#2954a3">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
